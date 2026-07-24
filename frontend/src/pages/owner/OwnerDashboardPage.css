@@ -1,0 +1,283 @@
+.owner-dashboard-page {
+  min-height: 100vh;
+}
+
+.owner-dashboard-banner {
+  padding: var(--space-12) 0;
+  background:
+    radial-gradient(
+      circle at top right,
+      rgb(20 184 166 / 14%),
+      transparent 32%
+    ),
+    linear-gradient(
+      135deg,
+      var(--color-primary-light),
+      var(--color-background)
+    );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.owner-dashboard-banner h1 {
+  margin-bottom: var(--space-3);
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  letter-spacing: -0.04em;
+}
+
+.owner-dashboard-banner p {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: var(--font-size-lg);
+}
+
+.owner-dashboard-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-5);
+  margin-bottom: var(--space-8);
+}
+
+.owner-dashboard-stats article {
+  display: flex;
+  min-height: 130px;
+  padding: var(--space-6);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--space-2);
+  text-align: center;
+}
+
+.owner-dashboard-stats strong {
+  color: var(--color-primary);
+  font-size: var(--font-size-3xl);
+}
+
+.owner-dashboard-stats span {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+}
+
+.owner-dashboard-layout {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-10);
+}
+
+.owner-dashboard-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.owner-section-heading h2 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-2xl);
+}
+
+.owner-section-heading p {
+  margin-bottom: 0;
+}
+
+.owner-listings-list,
+.owner-booking-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+.owner-listing-card,
+.owner-booking-card {
+  padding: var(--space-7);
+}
+
+.owner-listing-top,
+.owner-booking-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-6);
+}
+
+.owner-listing-status-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-3);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.owner-listing-status {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-bold);
+}
+
+.owner-listing-status-draft {
+  color: #854d0e;
+  background-color: #fef9c3;
+}
+
+.owner-listing-status-published {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.owner-listing-card h3,
+.owner-booking-card h3 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-xl);
+}
+
+.owner-listing-price {
+  display: flex;
+  flex-shrink: 0;
+  flex-direction: column;
+  text-align: right;
+}
+
+.owner-listing-price span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.owner-listing-price strong {
+  font-size: var(--font-size-xl);
+}
+
+.owner-listing-description {
+  margin: var(--space-5) 0;
+}
+
+.owner-listing-actions,
+.owner-booking-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.owner-delete-listing-button {
+  padding: var(--space-3);
+  color: var(--color-danger);
+  background-color: transparent;
+  font-weight: var(--font-weight-semibold);
+}
+
+.owner-booking-header {
+  margin-bottom: var(--space-5);
+}
+
+.owner-booking-information {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.owner-booking-information > div {
+  display: flex;
+  padding: var(--space-4);
+  flex-direction: column;
+  gap: var(--space-1);
+  background-color: var(--color-surface-secondary);
+  border-radius: var(--radius-md);
+}
+
+.owner-booking-information span {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.owner-booking-information strong {
+  font-size: var(--font-size-sm);
+  overflow-wrap: anywhere;
+}
+
+.owner-booking-actions {
+  margin-top: var(--space-5);
+}
+
+.owner-empty-state {
+  padding: var(--space-10);
+  text-align: center;
+}
+
+.owner-empty-state h3 {
+  margin-bottom: var(--space-2);
+}
+
+.owner-empty-state p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 950px) {
+  .owner-dashboard-stats,
+  .owner-booking-information {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .owner-dashboard-stats,
+  .owner-booking-information {
+    grid-template-columns: 1fr;
+  }
+
+  .owner-listing-top,
+  .owner-booking-header {
+    flex-direction: column;
+  }
+
+  .owner-listing-price {
+    text-align: left;
+  }
+
+  .owner-listing-actions,
+  .owner-booking-actions {
+    flex-direction: column;
+  }
+
+  .owner-listing-actions .btn,
+  .owner-booking-actions .btn {
+    width: 100%;
+  }
+
+  .owner-listing-card,
+  .owner-booking-card {
+    padding: var(--space-5);
+  }
+}
+.owner-approval-status,
+.owner-suspended-status {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-weight: var(--font-weight-bold);
+}
+
+.owner-approval-status-not-submitted {
+  color: var(--color-text-secondary);
+  background-color: var(--color-surface-secondary);
+}
+
+.owner-approval-status-pending {
+  color: #854d0e;
+  background-color: #fef9c3;
+}
+
+.owner-approval-status-approved {
+  color: #166534;
+  background-color: #dcfce7;
+}
+
+.owner-approval-status-rejected,
+.owner-suspended-status {
+  color: #991b1b;
+  background-color: #fee2e2;
+}
+
+.owner-listing-actions .btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  transform: none;
+}

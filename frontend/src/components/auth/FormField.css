@@ -1,0 +1,81 @@
+.auth-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.auth-form-group label {
+  color: var(--color-text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.required-indicator {
+  margin-left: var(--space-1);
+  color: var(--color-danger);
+}
+
+.auth-form-group input,
+.auth-form-group select {
+  min-height: 50px;
+  padding: 0 var(--space-4);
+}
+
+.auth-form-group input:disabled,
+.auth-form-group select:disabled {
+  cursor: not-allowed;
+  background-color: var(--color-surface-secondary);
+  opacity: 0.7;
+}
+
+.auth-form-group-error input,
+.auth-form-group-error select {
+  border-color: var(--color-danger);
+}
+
+.auth-form-group-error input:focus,
+.auth-form-group-error select:focus {
+  border-color: var(--color-danger);
+  box-shadow: 0 0 0 3px rgb(220 38 38 / 12%);
+}
+
+.auth-field-hint {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.auth-field-error {
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-medium);
+}
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 78px;
+}
+
+.password-visibility-button {
+  position: absolute;
+  top: 50%;
+  right: var(--space-3);
+  padding: var(--space-2);
+  color: var(--color-primary);
+  background-color: transparent;
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  transform: translateY(-50%);
+}
+
+.password-visibility-button:hover {
+  color: var(--color-primary-dark);
+}
+
+.password-visibility-button:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+  border-radius: var(--radius-sm);
+}

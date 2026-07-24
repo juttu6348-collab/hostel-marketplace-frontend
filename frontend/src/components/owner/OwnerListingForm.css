@@ -1,0 +1,62 @@
+.owner-listing-form {
+  display: flex;
+  padding: var(--space-8);
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.owner-form-heading {
+  margin-bottom: var(--space-2);
+}
+
+.owner-form-heading h2 {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-2xl);
+}
+
+.owner-form-heading p {
+  margin-bottom: 0;
+}
+
+.owner-listing-form textarea {
+  width: 100%;
+  padding: var(--space-4);
+  resize: vertical;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font: inherit;
+}
+
+.owner-listing-form textarea:focus {
+  border-color: var(--color-primary);
+  outline: none;
+  box-shadow: 0 0 0 3px rgb(37 99 235 / 12%);
+}
+
+.owner-description-footer {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.owner-form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+@media (max-width: 600px) {
+  .owner-listing-form {
+    padding: var(--space-5);
+  }
+
+  .owner-form-actions {
+    flex-direction: column;
+  }
+
+  .owner-form-actions .btn {
+    width: 100%;
+  }
+}

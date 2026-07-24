@@ -1,0 +1,55 @@
+.not-found-page {
+  display: grid;
+  min-height: 70vh;
+  padding: var(--space-7);
+  place-items: center;
+  background-color: var(--color-surface-secondary);
+}
+
+.not-found-card {
+  width: min(100%, 620px);
+  padding: var(--space-10);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.not-found-code {
+  display: block;
+  margin-bottom: var(--space-3);
+  color: var(--color-primary);
+  font-size: clamp(4rem, 14vw, 8rem);
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+}
+
+.not-found-card h1 {
+  margin-bottom: var(--space-3);
+}
+
+.not-found-card p {
+  max-width: 500px;
+  margin: 0 auto var(--space-7);
+}
+
+.not-found-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+@media (max-width: 480px) {
+  .not-found-card {
+    padding: var(--space-7);
+  }
+
+  .not-found-actions {
+    flex-direction: column;
+  }
+
+  .not-found-actions .btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,210 @@
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+
+.auth-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.auth-form-submit {
+  width: 100%;
+  min-height: 52px;
+  margin-top: var(--space-2);
+}
+
+.auth-form-submit:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+  transform: none;
+}
+
+.auth-general-error,
+.auth-success-message {
+  padding: var(--space-4);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.auth-general-error {
+  color: #991b1b;
+  background-color: #fee2e2;
+  border: 1px solid #fecaca;
+}
+
+.auth-success-message {
+  color: #166534;
+  background-color: #dcfce7;
+  border: 1px solid #bbf7d0;
+}
+
+.auth-form-options {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+}
+
+.auth-checkbox-label {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: var(--space-2);
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-sm);
+  cursor: pointer;
+}
+
+.auth-checkbox-label input {
+  width: 18px;
+  height: 18px;
+  min-height: 0;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: var(--color-primary);
+}
+
+.auth-text-button {
+  padding: 0;
+  color: var(--color-primary);
+  background-color: transparent;
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-semibold);
+}
+
+.auth-text-button:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.auth-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+  text-transform: uppercase;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  height: 1px;
+  flex: 1;
+  content: "";
+  background-color: var(--color-border);
+}
+
+.demo-account-box {
+  padding: var(--space-4);
+  background-color: var(--color-surface-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.demo-account-box strong {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.demo-account-box p {
+  margin-bottom: var(--space-2);
+  font-size: var(--font-size-sm);
+}
+
+.demo-account-box code {
+  display: inline-block;
+  padding: var(--space-1) var(--space-2);
+  color: var(--color-primary-dark);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-sm);
+}
+
+.role-selection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-4);
+}
+
+.role-option {
+  position: relative;
+  display: flex;
+  padding: var(--space-5);
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition:
+    border-color var(--transition-fast),
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.role-option:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.role-option-selected {
+  background-color: rgb(219 234 254 / 38%);
+  border-color: var(--color-primary);
+}
+
+.role-option input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.role-option-icon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: var(--color-primary);
+  background-color: var(--color-primary-light);
+  border-radius: var(--radius-md);
+  font-weight: var(--font-weight-bold);
+}
+
+.role-option strong {
+  font-size: var(--font-size-base);
+}
+
+.role-option span:last-child {
+  color: var(--color-text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.role-error {
+  margin-top: calc(var(--space-3) * -1);
+  color: var(--color-danger);
+  font-size: var(--font-size-xs);
+}
+
+.terms-link {
+  color: var(--color-primary);
+  font-weight: var(--font-weight-semibold);
+}
+
+@media (max-width: 600px) {
+  .auth-form-row,
+  .role-selection {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-form-options {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+.demo-account-option + .demo-account-option {
+  margin-top: var(--space-4);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+}

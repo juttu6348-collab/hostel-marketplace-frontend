@@ -1,0 +1,81 @@
+.public-info-page {
+  min-height: 70vh;
+  background-color: var(--color-surface-secondary);
+}
+
+.public-info-hero {
+  padding: var(--space-10) 0;
+  background:
+    linear-gradient(
+      135deg,
+      rgb(37 99 235 / 10%),
+      rgb(255 255 255 / 85%)
+    );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.public-info-hero-content {
+  max-width: 820px;
+}
+
+.public-info-hero h1 {
+  margin-bottom: var(--space-4);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.public-info-hero p {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+}
+
+.public-info-content {
+  max-width: 900px;
+  padding-top: var(--space-9);
+  padding-bottom: var(--space-10);
+}
+
+.public-info-section {
+  padding: var(--space-7);
+  margin-bottom: var(--space-5);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.public-info-section h2 {
+  margin-bottom: var(--space-4);
+  font-size: var(--font-size-xl);
+}
+
+.public-info-section p {
+  line-height: 1.8;
+}
+
+.public-info-section p:last-child {
+  margin-bottom: 0;
+}
+
+.public-info-section ul {
+  display: grid;
+  gap: var(--space-3);
+  padding-left: var(--space-6);
+  margin-bottom: 0;
+}
+
+.public-info-section li {
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+@media (max-width: 600px) {
+  .public-info-hero {
+    padding: var(--space-8) 0;
+  }
+
+  .public-info-section {
+    padding: var(--space-5);
+  }
+}
