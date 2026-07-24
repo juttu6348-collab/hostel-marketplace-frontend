@@ -1,16 +1,66 @@
-# React + Vite
+# HostelHub Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+HostelHub is a React-based hostel marketplace frontend that connects accommodation seekers, hostel owners, and platform administrators.
 
-Currently, two official plugins are available:
+## Current Status
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The current version is a frontend demonstration built with React and Vite. Application data and demo authentication are temporarily managed through React Context and browser localStorage.
 
-## React Compiler
+## Main Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Public Marketplace
 
-## Expanding the Oxlint configuration
+- Landing page
+- Hostel search and filtering
+- Hostel details
+- Public information pages
+- Contact form
+- Responsive footer
+- 404 page
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+### Customer
+
+- Demo authentication
+- Customer account
+- Favourites
+- Booking requests
+- Booking history
+- Booking cancellation
+
+### Hostel Owner
+
+- Owner dashboard
+- Listing creation and editing
+- Room management
+- Listing deletion
+- Approval submission
+- Publish and unpublish workflow
+
+### Administrator
+
+- Admin dashboard
+- Listing approval and rejection
+- User management
+- Booking oversight
+- Reports and statistics
+
+## Accessibility
+
+The frontend includes:
+
+- Skip-to-content navigation
+- Keyboard focus styles
+- Accessible form errors
+- Scroll-to-top route handling
+- Toast announcements
+- Confirmation dialogs
+- Reduced-motion support
+
+## Demo Accounts
+
+### Administrator
+
+Email:
+
+```text
+admin@hostelhub.demo
